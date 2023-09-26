@@ -1,0 +1,450 @@
+:root {
+    --header-height: 3.5rem;
+
+    --text-color-green: #5CA720;
+    --text-color: #161616;
+    --text-white: #FFF;
+    --bg-cabecalho: #ADDE87;
+    --bg-body: #FCFCFC;
+}
+
+body {
+    background-color: var(--bg-body);
+}
+
+.banner {
+    display: flex;
+}
+
+.color-banner {
+    background-color: var(--bg-cabecalho);
+    Width: 100%;
+    Height: 375px;
+    Top: 95px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/sale.svg);
+    background-position: center;
+    background-repeat: space;
+}
+
+.color-banner svg {
+    padding: 84px 0;
+}
+
+.conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 85px;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    padding: 48px 70px;
+}
+
+.conteudo .produto {
+    margin: 30px 97px;
+}
+
+.conteudo .produto .titulo_produto {
+    font-size: 22px;
+
+    color: var(--text-color);
+    margin-top: 23px;
+    margin-bottom: 11px;
+}
+
+.conteudo .produto .valor_produto {
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color-green);
+}
+
+.conteudo .produto .cifrao {
+    color: var(--text-color);
+    font-size: 20px;
+}
+
+/* MENU */
+.container {
+    width: 100%;
+    position: fixed;
+    height: 94px;
+    margin: auto;
+    background-color: var(--text-white);
+    z-index: 100;
+}
+
+.max-width {
+    max-width: 1300px;
+    margin-inline: auto;
+    padding-inline: 1rem;
+}
+
+.logo img {
+    width: 100%;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav__link {
+    margin-left: 25px;
+}
+
+.nav,
+.nav__list {
+    display: flex;
+}
+
+.nav {
+    height: calc(var(--header-height) + 2.25rem);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__list {
+    column-gap: 1.5rem;
+}
+
+.nav__link {
+    color: var(--title-color);
+    transition: all .3s ease;
+}
+
+/* Active link */
+
+.active-link,
+.nav__link:hover {
+    color: var(--first-color);
+}
+
+li a {
+    color: var(--text-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.border::after {
+    content: '';
+    display: block;
+    width: 0%;
+    margin-top: 2px;
+    border-bottom: 2px solid transparent;
+    transition: width 0.3s ease;
+}
+
+.border:hover::after {
+    width: 50%;
+    border-bottom: 2px solid var(--text-color-green);
+}
+
+/*FOOTER*/
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #A5A1A1;
+    padding: 48px 70px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 484px;
+}
+
+.social-links {
+    font-family: 'Lato', sans-serif;
+}
+
+.social-links li {
+    margin: 10px 0;
+    font-weight: 600;
+    color: #161616;
+    cursor: pointer;
+}
+
+/* FORMULÁRIO */
+
+.news {
+    display: flex;
+    flex-direction: column;
+}
+
+.news h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.news-form {
+    display: flex;
+    align-items: center;
+    margin-top: 18px;
+}
+
+input {
+    height: 54px;
+}
+
+.email {
+    border: 1px solid #D9D9D9;
+    width: 397px;
+    background-color: #F8F8F8;
+    padding-left: 13px;
+    font-size: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.button_envio {
+    background-color: #51B248;
+    padding-left: 34px;
+    padding-right: 34px;
+    height: 58px;
+    color: #FFFFFF;
+    font-weight: bolder;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+/* REDES SOCIAIS E PAGAMENTOS */
+
+.second_box {
+    border-top: 1px solid #A5A1A1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 48px 70px;
+    gap: 484px;
+}
+
+.social_media {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.social_media img {
+    margin-right: 20px;
+}
+
+.payments {
+    display: flex;
+    align-items: center;
+}
+
+.payments .icon {
+    margin-left: 24px;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+.mobile-menu {
+    display: flex;
+}
+
+@media screen and (max-width: 1380px) {
+    .conteudo .produto {
+        margin: 30px 50px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        height: auto;
+        padding: 10px 20px;
+    }
+
+    .color-banner {
+        height: 250px;
+    }
+
+    .cabecalho {
+        display: flex;
+        width: 100%;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+        padding: 24px 0;
+    }
+
+    .conteudo .produto {
+        margin: 20px;
+    }
+
+    .conteudo .produto .titulo_produto {
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+
+    .conteudo .produto .valor_produto {
+        font-size: 20px;
+    }
+
+    .container {
+        height: auto;
+    }
+
+    .nav__link {
+        margin: 15px;
+    }
+
+    li a {
+        font-size: 16px;
+    }
+
+    .social-links {
+        margin-right: 100px;
+        margin-bottom: 54px;
+    }
+
+    /* Rodapé para dispositivos móveis */
+    .footer-main {
+        height: auto;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .news-form {
+        flex-direction: column;
+        width: 346px;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .email {
+        width: 330px;
+        border-radius: 5px;
+    }
+
+    .button_envio {
+        width: 346px;
+        border-radius: 5px;
+    }
+
+    .second_box {
+        gap: 0.5rem;
+    }
+
+    /* Estilos para o menu hamburguer */
+
+    .close-button {
+        display: none;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: var(--text-color);
+    }
+
+    .close-icon {
+        font-weight: bold;
+    }
+
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .max-width {
+        align-items: center;
+        position: relative;
+        justify-content: space-evenly;
+    }
+
+    .nav__list {
+        display: none;
+    }
+
+    .hamburger-menu .bar {
+        background-color: #333;
+        height: 3px;
+        width: 25px;
+        margin: 4px 0;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: var(--white);
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    /*=============== Estilos para o menu móvel ===============*/
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: block;
+        background-color: var(--text-white);
+        position: absolute;
+        top: 70px;
+        right: 50px;
+        z-index: 1000;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .mobile-menu.active a {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* "X" quando o menu móvel está ativo */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-4px, 6px);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-4px, -6px);
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .color-banner {
+        background-size: contain;
+    }
+
+    .banner {
+        width: 100%;
+    }
+}
